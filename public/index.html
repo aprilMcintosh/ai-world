@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <main id="stage">
+      <canvas id="view"></canvas>
+      <div id="hud">
+        <div id="clock"><span id="day" title="Each day you watch is one year of their lives.">Year 1</span><span id="when">dawn</span><span id="danger" hidden></span><span id="era">The Beginning</span><span id="pop">2 people</span><span id="store" hidden></span></div>
+        <div id="controls">
+          <button id="auto" class="on" title="Let the camera follow the action. Scroll to zoom and drag to look around yourself.">Auto view</button>
+          <button id="pause" title="Pause or resume">Pause</button>
+          <button class="speed on" data-speed="1">1x</button>
+          <button class="speed" data-speed="2">2x</button>
+          <button class="speed" data-speed="3">3x</button>
+        </div>
+      </div>
+      <div id="tip" hidden></div>
+      <div id="tree" hidden>
+        <div id="treeBar"><b>Family tree</b><span class="grow"></span><button id="treeOut" title="Smaller">&minus;</button><button id="treeIn" title="Bigger">+</button><button id="treeFit">Fit</button><button id="treeClose">Back to the map</button></div>
+        <div id="treeBody"><div id="treeSizer"></div></div>
+      </div>
+      <div id="ended" hidden>This world has ended. The Chronicle tab holds everything that happened. To begin again, stop the game and run: node server.js --new</div>
+      <div id="offline" hidden>Lost touch with the world. Is the server still running? Reconnecting...</div>
+    </main>
+
+    <aside id="side">
+      <header>
+        <h1>AI World</h1>
+        <div id="brain" class="pill">Waking up...</div>
+        <p id="brainNote" hidden></p>
+        <p id="share" hidden></p>
+      </header>
+      <nav>
+        <button class="tab on" data-tab="live">Live</button>
+        <button class="tab" data-tab="chronicle">Chronicle</button>
+        <button class="tab" data-tab="people">People</button>
+        <button class="tab" data-tab="known">Known</button>
+        <button class="tab" data-tab="family">Family</button>
+      </nav>
+      <div id="feedBar"><button class="flt on" data-show="all">Everything</button><button class="flt" data-show="talk">Talk</button><button class="flt" data-show="doings">Doings</button><button class="flt" data-show="happenings">Happenings</button></div>
+      <section id="live" class="panel on" data-show="all"></section>
+      <section id="chronicle" class="panel"></section>
+      <section id="known" class="panel"></section>
+      <section id="family" class="panel"></section>
+      <section id="people" class="panel">
+        <div id="roster"></div>
+        <div id="detail" hidden></div>
+      </section>
+    </aside>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
