@@ -1,0 +1,74 @@
+{
+  "port": 4242,
+  "host": "127.0.0.1",
+  "llm": {
+    "provider": "ollama",
+    "baseUrl": "http://localhost:11434",
+    "model": "auto",
+    "smallModel": "auto",
+    "apiKey": "",
+    "temperature": 0.9,
+    "minGapMs": 200,
+    "parallel": 3,
+    "contextTokens": 12288,
+    "timeoutMs": 90000
+  },
+  "world": {
+    "seed": "eden",
+    "castSize": 24,
+    "dayLengthSec": 480,
+    "talkLines": 6,
+    "daysToAdult": 10,
+    "lifespanDays": 80,
+    "yearDays": 12,
+    "birthGapDays": 2,
+    "maxChildrenPerCouple": 0,
+    "fertileUntilAge": 55,
+    "maxPopulation": 0,
+    "travelers": false,
+    "wolves": true,
+    "chores": true,
+    "violence": true,
+    "affairs": true,
+    "ruin": false,
+    "founders": [
+      {
+        "name": "Adam",
+        "gender": "m",
+        "personality": "Steady, practical and a little stubborn. Loves making things with his hands and giving everything he sees a name. Devoted to Eve, though he would rather show it than say it.",
+        "shirt": "#5d8a4a",
+        "hair": "#3a2a1e",
+        "skin": "#e2b085",
+        "nature": {
+          "temperament": "steady and practical, slow to speak",
+          "flaw": "stubborn past sense, and goes silent instead of saying what is wrong",
+          "humor": "dry, mostly at his own expense",
+          "voice": "few words, plain, gives things names",
+          "drawn": "making things with his hands"
+        },
+        "genes": { "temper": -1, "drive": 1, "warmth": 0, "nerve": 0, "social": -1, "honest": 1, "pride": 1 }
+      },
+      {
+        "name": "Eve",
+        "gender": "f",
+        "personality": "Curious, warm and quick-witted. Notices what is missing and dreams up what this place could become. Devoted to Adam, and not shy about telling him when he is wrong.",
+        "shirt": "#c9654a",
+        "hair": "#7a3f1d",
+        "skin": "#f0c9a0",
+        "nature": {
+          "temperament": "curious, warm and quick-witted",
+          "flaw": "sharp-tongued, and has to say it when someone is wrong",
+          "humor": "teasing, laughs easily and loudly",
+          "voice": "quick and direct, asks questions and does not wait for the answer",
+          "drawn": "whatever is missing from this place and could exist"
+        },
+        "genes": { "temper": 1, "drive": 1, "warmth": 1, "nerve": 1, "social": 2, "honest": 2, "pride": 0 }
+      }
+    ],
+    "weather": true,
+    "disasters": true,
+    "accidents": true,
+    "growLand": true,
+    "matingDrive": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ai-world",
+  "version": "0.1.0",
+  "description": "Two people in an empty world. They think for themselves, build, talk, and raise a family while you watch.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "new": "node server.js --new"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
